@@ -1,0 +1,46 @@
+# Training config with Stable Diffusion VAE
+
+# Dataset
+input_h: 256
+input_w: 256
+n_frames: 10
+frame_skip: 1
+action_dim: 7
+num_workers: 16
+dataset_paths:
+  - "path to bridge dataset"
+
+# Training
+batch_size: 4
+checkpoint_dir: "output path for checkpoints"
+timesteps: 1000
+lr: 8e-5
+ema_decay: 0.999
+max_train_steps: 500000
+enable_confidence_prediction: True # option to enable confidence prediction head
+
+# VAE Architecture
+vae_type: "sd" # Stable Diffusion VAE
+
+# Model Architecture
+patch_size: 2
+model_dim: 1024
+layers: 16
+heads: 16
+
+# Logging
+validate_every: 1000
+log_every: 100
+wandb_project: "conf_pred"
+wandb_run_name: null # Auto-generated if not specified
+
+# Sampling
+sampling_timesteps: 10
+window_len: null
+horizon: 1
+
+# Confidence prediction
+# reference latent path for confidence prediction
+ref_latent_dir: <full path to c-cubed>/dynuq/scripts/gt_latent/single_frame # update this path
+# default error threshold for accuracy function in confidence prediction
+conf_err_threshold: 5.0e-1

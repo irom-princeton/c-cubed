@@ -1,0 +1,36 @@
+[project]
+name = "dynuq"
+version = "0.1.1"
+requires-python = ">=3.9"
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "diffusers",
+    "accelerate",
+    "fire",
+    "einops",
+    "pytorchvideo",
+    "tqdm",
+    "imageio",
+    "matplotlib",
+    "tensorflow",
+    "tensorflow-datasets",
+    "av<12",
+    "omegaconf",
+    "wandb",
+    "pytorch-msssim",
+    "torchmetrics",
+    "einops",
+    "mediapy",
+    "ftfy",
+    "pytorch_msssim",
+    "torchmetrics",
+    "natsort",
+    "joblib",
+    "scipy",
+]
+
+[tool.setuptools.packages.find]
+include = ["dynuq*"]

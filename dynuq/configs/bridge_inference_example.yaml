@@ -1,0 +1,28 @@
+# Model's checkpoiint
+checkpoint_path: "checkpoint path"
+
+# model's config path
+model:
+  config_path: "path to model config (yaml)"
+
+# eval params
+input_video: "path to input video dataset"
+action_path: "path to actions dataset"
+output_path: "output path for generated videos"
+
+# Optional path to groundtruth video for comparison
+groundtruth_path: null
+
+# Generation config
+n_context_frames: 1
+window_len: null
+horizon: 1
+fps: 8
+use_ema: True
+
+# Confidence prediction
+# default error threshold for accuracy function in confidence prediction
+err_threshold_conf_pred: 5.0e-1
+err_threshold_conf_pred_min: 1e-1
+err_threshold_conf_pred_max: 1e0
+num_err_threshold_conf_pred_steps: 10

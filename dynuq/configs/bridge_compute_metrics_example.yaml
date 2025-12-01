@@ -1,0 +1,24 @@
+defaults:
+  # metrics
+  - metrics/calibration_metrics/calibration_metrics
+
+  # self
+  - _self_
+
+# input dataset paths
+dataset:
+  input_video: "path to input video dataset"
+  action_path: "path to actions dataset"
+  gen_video_base_path: "path to generated videos"
+
+# calibration evaluation parameters
+calibration:
+  num_err_threshold_conf_pred_steps: 10
+  err_threshold_conf_pred_range:
+    - 1e-1 # min
+    - 1e0 # max
+    # - 8.5e-1 # error threshold for computing accuracy
+  num_bins: 20 # number of bins for reliability diagram
+  output_path: outputs/bridge_eval_metrics/metrics_conf_pred/calibration
+  save_plots: true
+  # output_path: /n/fs/not-fmrl/Projects/apple_project/ac_video_model_uq/dynuq/scripts/outputs/bridge_eval_metrics/difficulty # conf_pred
