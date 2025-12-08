@@ -29,7 +29,7 @@
   </a> -->
   <h4 align="center">
   <a href="https://c-cubed-uq.github.io/">Project Page</a> 
-  | <a href= "#">arXiv (Coming Soon!)</a>
+  | <a href= "https://arxiv.org/abs/2512.05927">arXiv</a>
   <div align="center"></div>
 </p>
 
